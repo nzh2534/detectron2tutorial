@@ -1,4 +1,4 @@
-print("Hello")
+print("Starting")
 
 from detectron2.utils.logger import setup_logger
 
