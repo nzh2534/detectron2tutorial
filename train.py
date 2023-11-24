@@ -18,7 +18,7 @@ checkpoint_url = "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
 output_dir = "./output/object_detection"
 num_class = 1
 
-device = "cuda"
+device = "cuda" #or cpu
 
 train_dataset_name = "train_dataset"
 train_images_path = "train"
@@ -42,7 +42,7 @@ register_coco_instances(
     json_file=test_json_annot_path,
     image_root=test_images_path)
 
-plot_samples(dataset_name=train_dataset_name, n=2)
+#plot_samples(dataset_name=train_dataset_name, n=2)
 
 def main():
     cfg = get_train_cfg(config_file_path, checkpoint_url, train_dataset_name, test_dataset_name, num_class, device, output_dir)
